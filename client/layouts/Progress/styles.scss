@@ -1,0 +1,49 @@
+.progress-page {
+  padding-top: 234px;
+  padding-bottom: 344px;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.waves {
+  width: 100%;
+  height: 270px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $grey-600;
+}
+
+.wave-back_svg__svg,
+.wave-front_svg__svg {
+  position: absolute;
+  bottom: 100%;
+  width: 200%;
+}
+
+
+.wave-back_svg__svg {
+  left: 0;
+  animation: waveBack 1.4s infinite linear;
+}
+
+.wave-front_svg__svg {
+  right: 0;
+  animation: waveFront 0.7s infinite linear;
+}
+
+@keyframes waveFront {
+  100% {
+      transform: translate(50%,0);
+  }
+}
+
+@keyframes waveBack {
+  100% {
+      transform: translate(-50%,0);
+  }
+}

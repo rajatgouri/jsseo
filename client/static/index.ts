@@ -1,0 +1,12 @@
+export { default as Waves } from './svg/waves.svg'
+export { default as WaveFront } from './svg/wave-front.svg'
+export { default as WaveBack } from './svg/wave-back.svg'
+
+export { default as Js } from './svg/js.svg'
+export { default as Seo } from './svg/seo.svg'
+export { default as BadLinks } from './svg/bad-links.svg'
+export { default as Pwa } from './svg/pwa.svg'
+export { default as PageSpeed } from './svg/page-speed.svg'
+export { default as Screenshots } from './svg/screenshots.svg'
+export { default as Warning } from './svg/warning.svg'
+export { default as Check } from './svg/check.svg'

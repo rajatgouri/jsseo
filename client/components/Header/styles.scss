@@ -1,0 +1,188 @@
+.header {
+  padding-top: 32px;
+  padding-bottom: 13px;
+
+  &__logo {
+    max-width: 168px;
+
+    &--small {
+      max-width: 131px;
+    
+    }
+  }
+}
+.logo_box{
+  max-width: 111px;
+  width: 100%;
+}
+
+.navbar-container{
+      width: 100%;
+      max-width: 84%;
+      margin: 15px auto;
+      display: flex;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+    .navbar-nav{
+        list-style-type: none;
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-end;
+        -ms-justify-content: flex-end;
+        // align-items: center;
+        padding-left: 0;
+        gap: 4%;
+        grid-gap: 4%;
+        -webkit-grid-gap:4%;
+        flex-wrap: wrap;
+        margin-right: 47px;
+    .nav-link{
+       color: #fff;
+       text-decoration: none;
+    }   
+  }
+  .social-links-nav-mobile{
+    display: none;
+  }
+  .install_ext{
+    max-width: 158px;
+    width: 100%;
+    // display: flex;
+    .install-ext-link{
+      background-color: #ff623f;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .navbar-toggle{
+      display: none;
+    }
+  }
+}
+
+
+//all media query starts here//
+
+@media(max-width: 991px) {
+  .navbar-container{
+    display: flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 20px;
+    .navbar-nav{
+      flex-direction: column;
+      -ms-flex-direction: column;
+      margin-right: 0;
+      display: none;
+      gap: 10px;
+      display: none;
+      width: 100%;
+      max-width: 100%;
+      position: absolute;
+      height: 100%;
+      background: #000000e0;
+      top: 0;
+      left: 0;
+      // padding-top: 15%;
+      padding-top: 103px;
+      padding-left: 17px;
+      z-index: 55;
+  }
+  .mobileMenu{
+    display: block;
+  }
+  .social-links-nav-mobile{
+    display: flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    position: absolute;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    // top: 26%;
+    // top: 44%;
+    margin-top: 235px;
+    gap: 16px;
+    grid-gap: 16px;
+    -webkit-grid-gap:16px;
+    left: 16px;
+    // margin-top: 117px;
+    z-index: 55;
+    .nav-link{
+      color: #fff;
+    }
+  }
+    .install_ext{
+      max-width: 201px;
+      width: 100%;
+      display: flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      align-items: baseline;
+      -webkit-grid-gap: 20px;
+      .navbar-toggle{
+        display: inline-block;
+        color: #fff;
+      }
+      .install-ext-link{
+        padding: 5px 0;
+        max-width: 150px;
+        width: 100%;
+        text-align: center;
+        margin-right: 15px;
+      }
+      .close-icon{
+        display: none;
+        position: absolute;
+        right: 0;
+        right: 36px;
+        top: 25px;
+        z-index: 55;
+      }
+    }
+  } 
+
+  svg {
+    width: 14px !important;
+  }
+}
+
+@media(max-width:768px){
+  .ant-progress-outer{
+    display: none;
+  }
+  body{
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .header{
+    padding-top: 0;
+  }
+  
+  .logo_box{
+    max-width: 24%;
+    width: 100%;
+  }
+
+  
+  
+}
+

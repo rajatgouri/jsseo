@@ -1,0 +1,45 @@
+.article {
+  &__container {
+    margin-top: 61px;
+    margin-bottom: 164px;
+    max-width: 640px;
+  }
+
+  &__body {
+    h6 {
+      margin-bottom: 6px;
+    }
+
+    p + h6 {
+      margin-top: 34px;
+    }
+
+    p {
+      &:not(:first-of-type) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__readtime {
+    position: relative;
+    padding-left: 43px;
+
+    &::before {
+      content: '';
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: currentColor;
+    }
+  }
+}
+
+.art-progress {
+  position: sticky;
+  top: 0;
+}

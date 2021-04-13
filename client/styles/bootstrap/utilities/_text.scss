@@ -1,0 +1,74 @@
+// stylelint-disable declaration-no-important
+
+//
+// Text
+//
+
+.text-monospace { font-family: $font-family-monospace; }
+
+// Alignment
+
+.text-justify  { text-align: justify; }
+.text-wrap     { white-space: normal; }
+.text-nowrap   { white-space: nowrap; }
+.text-truncate { @include text-truncate(); }
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left; }
+    .text#{$infix}-right  { text-align: right; }
+    .text#{$infix}-center { text-align: center; }
+  }
+}
+
+// Transformation
+
+.text-lowercase  { text-transform: lowercase; }
+.text-uppercase  { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+// Decoration 
+.text-underline {
+  text-decoration: underline;
+}
+
+// Weight and italics
+
+.font-italic         { font-style: italic; }
+
+@each $value in $font-weights {
+  .f-weight-#{$value} {
+    font-weight: $value;
+  }
+}
+
+// Contextual colors
+
+.text-white { color: $white; }
+
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value, true);
+}
+
+.text-body { color: $black; }
+
+// Misc
+
+.text-hide {
+  @include text-hide($ignore-warning: true);
+}
+
+.text-decoration-none { text-decoration: none; }
+
+.text-break {
+  word-break: break-word; // Deprecated, but avoids issues with flex containers
+  word-wrap: break-word; // Used instead of `overflow-wrap` for IE & Edge Legacy
+}
+
+// Reset
+
+.text-reset { color: inherit; }
